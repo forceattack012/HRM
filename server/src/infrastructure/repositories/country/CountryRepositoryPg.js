@@ -15,7 +15,7 @@ module.exports = class extends CountryRepository {
     async getAll() {
         const countries = await this.model.findAll();
         return  countries.map((country) => {
-            return new Country(country.countryCode, country.countryName);
+            return new Country(country.countryCode, country.countryName)
         })
     }
 }

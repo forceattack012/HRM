@@ -1,7 +1,6 @@
 'use strict'
 
-const CountryRepository = require('../../../domain/country/CountryRepository');
 
-module.exports = () => {
-    return CountryRepository.getAll();
+module.exports = async() => {
+    return await CountryRepository.getAll();
 }

@@ -1,0 +1,1 @@
+COMAND MIGRATION sequelize db:migrate   --config ..\..\..\config\pgConfig.json
