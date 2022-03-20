@@ -1,13 +1,26 @@
-module.exports = (sequelize, DataTypes) => {
-    sequelize.define('user', {
+'use strict'
+
+module.exports = (sequelize, Sequelize) => {
+    const country = sequelize.define('Country', {
         countryCode: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
             primaryKey: true,
         },
         countryName: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
+        },
+        createdAt: {
+            type: Sequelize.DATE
+        },
+        updatedAt: {
+            type: Sequelize.DATE
         }
-    })
+    },
+    {
+        tableName: "Country", // relation "user" does not exist
+    });
+
+    return country;
 }

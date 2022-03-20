@@ -3,8 +3,9 @@
 //const expressSwagger = require('express-swagger-generator')(app);
 const app = require('./app');
 var http = require('http');
+const EnvironmentConfig = require('../config/environment');
 
-const port = process.env.PORT || 3001;
+const port = EnvironmentConfig.host.port;
 
 const createServer = async() => {
     app.set('port', port);
